@@ -13,9 +13,8 @@ function love.load()
 end
 
 function love.update(dt)
-    --print("Main: ", mapState)
-    player.update(player, mapState, dt)
-    --level.update(level, dt)
+    level.update(level, dt)
+    player.update(player, dt)
     for i = 1, #enemies do
         enemies[i].update(enemies[i], dt, player)
     end   
